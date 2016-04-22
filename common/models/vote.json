@@ -24,7 +24,12 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "survey": {
+      "type": "belongsTo",
+      "model": "survey"
+    }
+  },
   "acls": [],
   "methods": {}
 }

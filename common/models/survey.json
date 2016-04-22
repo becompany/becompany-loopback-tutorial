@@ -1,0 +1,24 @@
+{
+  "name": "survey",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "topic": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "votes": {
+      "type": "hasMany",
+      "model": "vote",
+      "foreignKey": "surveyId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

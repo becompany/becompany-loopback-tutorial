@@ -1,5 +1,6 @@
 module.exports = function(Vote) {
   Vote.validatesUniquenessOf('ip', {scopedTo: ['resource']});
+  Vote.validatesPresenceOf('surveyId');
 
   Vote.voteAverage = function(resource, cb) {
     Vote.find({where: {resource: resource}}, function (err, votes) {

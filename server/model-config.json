@@ -35,5 +35,9 @@
   "vote": {
     "dataSource": "db",
     "public": true
+  },
+  "survey": {
+    "dataSource": "db",
+    "public": true
   }
 }
