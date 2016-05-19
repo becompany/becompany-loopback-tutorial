@@ -17,6 +17,11 @@
       "type": "hasMany",
       "model": "vote",
       "foreignKey": "surveyId"
+    },
+    "resources": {
+      "type": "hasMany",
+      "model": "resource",
+      "foreignKey": "resourceId"
     }
   },
   "acls": [

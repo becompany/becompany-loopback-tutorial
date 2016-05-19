@@ -11,6 +11,12 @@
       "required": true
     }
   },
+  "relations": {
+    "survey": {
+      "type": "belongsTo",
+      "model": "survey"
+    }
+  },
   "validations": [],
   "relations": {},
   "acls": [],
