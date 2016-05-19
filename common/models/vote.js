@@ -1,5 +1,6 @@
 module.exports = function(Vote) {
   Vote.validatesUniquenessOf('ip', {scopedTo: ['resource']});
+  Vote.validatesInclusionOf('value', {in: [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5]});
   Vote.validatesPresenceOf('surveyId');
 
   Vote.voteAverage = function(resource, cb) {
