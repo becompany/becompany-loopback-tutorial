@@ -21,7 +21,7 @@
     "resources": {
       "type": "hasMany",
       "model": "resource",
-      "foreignKey": "resourceId"
+      "foreignKey": "surveyId"
     }
   },
   "acls": [
