@@ -1,14 +1,20 @@
 {
   "name": "resource",
   "base": "PersistedModel",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
   "properties": {
     "name": {
       "type": "string",
-      "required": true
+      "required": true,
+      "id": true
+    },
+    "surveyId": {
+      "type": "number",
+      "required": true,
+      "id": true
     }
   },
   "relations": {
