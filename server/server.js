@@ -16,6 +16,17 @@ app.start = function() {
   });
 };
 
+//http://stackoverflow.com/questions/35660857/loopback-get-ip-address-from-operation-hook
+app.remotes().before('*.*', function(ctx,next) {
+  loopback.getCurrentContext().set('remoteAddress',ctx.req.connection.remoteAddress);
+  next();
+});
+
+app.remotes().before('*.prototype.*', function(ctx,instance,next) {
+  loopback.getCurrentContext().set('remoteAddress',ctx.req.connection.remoteAddress);
+  next();
+});
+
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
 boot(app, __dirname, function(err) {
